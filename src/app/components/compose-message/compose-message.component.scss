@@ -1,0 +1,27 @@
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+
+.contact{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  &>div{
+    max-width: 300px;
+background-color: white;
+padding: 30px;
+box-shadow: 0 0 20px rgba(0,0,0,0.3);
+border-radius: 20px;
+  }
+}

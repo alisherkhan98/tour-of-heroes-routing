@@ -1,0 +1,22 @@
+<h2>CRISIS CENTER</h2>
+<ul class="crises">
+  <li *ngFor="let crisis of crises">
+    <a [routerLink]="['/crisis-center', crisis.id]" [class.selected]="crisis.id === selectedId">
+      <span class="badge">{{crisis.id}}</span>
+      <span class="name">{{crisis.name}}</span>
+
+    </a>
+    <button type="button" class="delete" title="delete hero"
+    (click)="delete(crisis)">Delete</button>
+  </li>
+</ul>
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #crisisName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(crisisName.value); crisisName.value=''">
+    Add crisis
+  </button>
+</div>
+<router-outlet></router-outlet>
